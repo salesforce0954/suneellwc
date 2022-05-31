@@ -1,0 +1,15 @@
+<apex:page controller="showContactOppRelatedRecords">
+    <apex:pageblock >
+        <apex:pageBlockTable value="{!contactRecords}" var="cr">
+           <apex:column value="{!cr.id}"/>
+           <apex:column value="{!cr.name}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+    
+    <apex:pageblock >
+        <apex:pageBlockTable value="{!opportunityRecords}" var="or">
+           <apex:column value="{!or.id}"/>
+           <apex:column value="{!or.name}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

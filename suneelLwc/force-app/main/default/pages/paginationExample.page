@@ -1,0 +1,19 @@
+<apex:page controller="paginationExample">
+  
+  <apex:pageBlock >
+ 
+    <apex:pageBlockSection >
+      <apex:pageBlockTable value="{!accounts}" var="acc">
+         <apex:column value="{!acc.id}"/>
+         <apex:column value="{!acc.Name}"/>
+      </apex:pageBlockTable>
+       
+     
+    </apex:pageBlockSection>
+    <apex:form >
+     <apex:commandButton action="{!firstPage}" value="First"/>
+      <apex:commandButton action="{!previous}" value="Previous" disabled="{!disable}"/>
+      <apex:commandButton action="{!next}" value="Next"/>
+    </apex:form>
+  </apex:pageBlock>
+</apex:page>

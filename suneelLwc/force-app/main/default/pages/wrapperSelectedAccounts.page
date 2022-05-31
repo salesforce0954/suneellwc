@@ -1,0 +1,24 @@
+<apex:page controller="wrapperSelectedAccounts">
+ 
+ <apex:pageBlock >
+ <apex:form >
+ <apex:commandButton action="{!recordsSelected}" value="Select Accounts"/>
+  
+  <apex:pageBlockTable value="{!waList}" var="wa">
+    <apex:column >
+    <apex:inputCheckbox value="{!wa.isSelected}"/>
+    </apex:column>
+    <apex:column value="{!wa.acc.name}"/>
+    <apex:column value="{!wa.acc.phone}"/>
+  </apex:pageBlockTable>
+  
+  <apex:commandButton action="{!deleteSelectedAccounts}" value="Delete Accounts"/>
+   <apex:pageBlockTable value="{!selectedAccs}" var="sa">
+    <apex:column value="{!sa.name}"/>
+    <apex:column value="{!sa.phone}"/>
+  </apex:pageBlockTable>
+ 
+ </apex:form>
+ </apex:pageBlock>
+ 
+</apex:page>

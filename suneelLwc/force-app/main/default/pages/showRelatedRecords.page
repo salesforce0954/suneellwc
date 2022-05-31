@@ -1,0 +1,5 @@
+<apex:page controller="showRelatedRecords">
+  <apex:form >
+     <apex:commandLink action="{!newContact}" value="New Contact"/>
+  </apex:form>
+</apex:page>

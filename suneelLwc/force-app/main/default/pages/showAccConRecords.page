@@ -1,0 +1,28 @@
+<apex:page controller="showAccConRecords">
+
+  <apex:pageBlock >
+    <apex:pageBlockSection >
+      <apex:pageBlockSectionItem >
+       <apex:pageBlockTable value="{!AccountInfo}" var="acc">
+         <apex:column value="{!acc.name}"/>
+       </apex:pageBlockTable>
+      </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+  <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockSection >
+    <apex:pageBlockSectionItem >
+     <apex:pageBlockTable value="{!ContactInfo}" var="con">
+      <apex:column value="{!con.name}"/>
+      <apex:column HeaderValue="Action" width="60"> 
+     <apex:commandLink action="{!deleteContact}" value="Del"><apex:param value="{!con.id}" name="contactId"/></apex:commandLink></apex:column>
+     </apex:pageBlockTable>
+
+    </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

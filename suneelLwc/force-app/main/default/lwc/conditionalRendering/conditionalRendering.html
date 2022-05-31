@@ -1,0 +1,13 @@
+<template>
+    <lightning-input type="checkbox" label="showOrHidediv" onchange={showDivHandler}></lightning-input>
+    <template if:true={displayDiv}>
+        <div>This div is visible now</div>
+        <template for:each={listCity} for:item="City">
+            <p key={City}>{City}</p>
+        </template>
+    </template>
+   <p> Iterator example</p>
+   <template iterator:it = {listCity}>
+       <p key={it.value}>{it.value}</p>
+   </template>
+</template>

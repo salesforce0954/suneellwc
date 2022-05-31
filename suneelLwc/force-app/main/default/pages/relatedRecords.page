@@ -1,0 +1,15 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+    <apex:pageBlock >
+    Youre looking at some related lists for {!account.name}:
+    </apex:pageBlock>
+
+   <apex:repeat value="{!accounts}" var="a">
+    <apex:relatedList list="Opportunities" subject="{!a.id}"/>
+
+    <apex:relatedList list="Contacts" subject="{!a.id}">
+        <apex:facet name="header">Titles can be overriden with facets</apex:facet>
+    </apex:relatedList>
+
+    <apex:relatedList list="Cases" subject="{!a.id}" title="Or you can keep the image, but change the text" />
+    </apex:repeat>
+</apex:page>

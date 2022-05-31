@@ -1,0 +1,17 @@
+<apex:page standardController="Account">
+  Name : <apex:outputField value="{!Account.Name}"/> <br/>
+  Phone : <apex:OutputField value="{!Account.Phone}" /><br/>
+  <br/>
+  <b>Contact List</b><br/>
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+  <apex:pageBlockTable value="{!Account.Contacts}" var="con">
+      <apex:column value="{!con.Id}"/>
+  </apex:pageBlockTable><br/><br/>
+  <b>Opportunity List</b><br/>  
+  <apex:pageBlockTable value="{!Account.Opportunities}" var="opty">
+      <apex:column value="{!opty.Id}"/>
+  </apex:pageBlockTable>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page controller="retrieveAccounts">
+ <apex:pageBlock > 
+  <apex:pageBlockTable value="{!activeAccounts}" var="acc">  
+      <apex:column value="{!acc.id}"/>
+      <apex:column value="{!acc.Name}"/>
+      <apex:column value="{!acc.Phone}"/>
+  </apex:pageBlockTable> 
+ </apex:pageBlock>
+</apex:page>
