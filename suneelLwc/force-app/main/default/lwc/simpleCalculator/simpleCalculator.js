@@ -2,6 +2,7 @@ import { LightningElement,track } from 'lwc';
 
 export default class SimpleCalculator extends LightningElement {
 
+    //Adding track attributes
     @track currentResult;
     @track previousResult = [];
     @track showPreviousResult = false;
