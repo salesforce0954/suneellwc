@@ -4,6 +4,7 @@ export default class SimpleCalculator extends LightningElement {
 
     //Adding track attributes
     @track currentResult;
+    //Adding previousresult
     @track previousResult = [];
     @track showPreviousResult = false;
     firstNumber;
